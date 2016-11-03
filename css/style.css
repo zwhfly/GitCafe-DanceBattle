@@ -1,0 +1,34 @@
+.bg_mypic{
+	background-image: url(../img/s1_bg.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 12%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.mylink-hover{
+  background: rgba(254, 209, 54, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  opacity:0;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+
+}
+.mylink-hover:hover{
+	opacity:1;
+}
+.mylink-hover-content{
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 40%;
+  margin-top: -5px;
+  color: white;
+} 
