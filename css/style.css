@@ -8,6 +8,32 @@
     background-size: cover;
     -o-background-size: cover;
 }
+.bg_mypic1{
+	background-image: url(../img/bili.jpg);
+	background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+    -o-background-size: 100%;
+}
+.bg_mypic2{
+	background-image: url(../img/acfun1.jpg);
+	background-repeat: no-repeat;
+    -webkit-background-size: 90%;
+    -moz-background-size: 90%;
+    background-size: 90%;
+   -o-background-size: 90%;
+}
+.bg_mypic3{
+	background-image: url(../img/douyu.jpg);
+	background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
+.bg_mypic4{
+	background-image: url(../img/youku.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+}
 .mylink-hover{
   background: rgba(254, 209, 54, 0.9);
   position: absolute;
