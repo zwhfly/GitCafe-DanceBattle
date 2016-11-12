@@ -1,5 +1,5 @@
 .bg_mypic{
-	background-image: url(../img/s1_bg.jpg);
+	background-image: url(../img/video/s1_bg.jpg);
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 12%;
@@ -9,7 +9,7 @@
     -o-background-size: cover;
 }
 .bg_mypic1{
-	background-image: url(../img/bili.jpg);
+	background-image: url(../img/video/bili.jpg);
 	background-repeat: no-repeat;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -17,7 +17,7 @@
     -o-background-size: 100%;
 }
 .bg_mypic2{
-	background-image: url(../img/acfun1.jpg);
+	background-image: url(../img/video/acfun1.jpg);
 	background-repeat: no-repeat;
     -webkit-background-size: 90%;
     -moz-background-size: 90%;
@@ -25,12 +25,12 @@
    -o-background-size: 90%;
 }
 .bg_mypic3{
-	background-image: url(../img/douyu.png);
+	background-image: url(../img/video/douyu.png);
 	background-repeat: no-repeat;
     background-position: 50% 0%;
 }
 .bg_mypic4{
-	background-image: url(../img/youku.jpg);
+	background-image: url(../img/video/youku.jpg);
 	background-repeat: no-repeat;
 	background-position: 50% 0%;
 }
@@ -62,3 +62,48 @@
 .myicons{
 	margin-top:35%;
 }
+.mypicpage a{
+	cursor:pointer;
+}
+
+/** 404.html */
+
+.light-background {
+    background-color: #f0f2f4;
+}
+.wrapper.no-navigation {
+    padding-top: 0;
+}
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+    min-height: 100%;
+    padding-bottom: 45px;
+}
+.error-wrapper .error-inner {
+    width:400px;
+    margin: 0px auto;
+    text-align: center;
+    color: #666;
+    -webkit-font-smoothing: antialiased;
+}
+.error-wrapper .error-inner .error-type.animated {
+    visibility: visible;
+    animation: fadeInDown 1s ease;
+    -webkit-animation: fadeInDown 1s ease;
+    -moz-animation: fadeInDown 1s ease;
+    -ms-animation: fadeInDown 1s ease;
+    -o-animation: fadeInDown 1s ease;
+}
+.error-wrapper .error-inner .error-type {
+    font-size: 15em;
+	font-family: Raleway,sans-serif,Times;
+}
+.m-top-md {
+    margin-top: 20px;
+}
+@-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translateY(-20px)}100%{opacity:1;-webkit-transform:translateY(0)}}
+@-moz-keyframes fadeInDown{0%{opacity:0;-moz-transform:translateY(-20px)}100%{opacity:1;-moz-transform:translateY(0)}}
+@-ms-keyframes fadeInDown{0%{opacity:0;-ms-transform:translateY(-20px)}100%{opacity:1;-ms-transform:translateY(0)}}
+@keyframes fadeInDown{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}
