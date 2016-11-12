@@ -1,5 +1,5 @@
 .bg_mypic{
-	background-image: url(../img/video/s1_bg.jpg);
+	background-image: url(../img/s1_bg.jpg);
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 12%;
@@ -62,12 +62,13 @@
 .myicons{
 	margin-top:35%;
 }
+
+/** photo.html */
 .mypicpage a{
 	cursor:pointer;
 }
 
 /** 404.html */
-
 .light-background {
     background-color: #f0f2f4;
 }
