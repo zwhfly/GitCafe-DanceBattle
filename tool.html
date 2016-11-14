@@ -59,18 +59,28 @@ function showdemo(e){
 			<div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">工具/黑科技</h2>
-                    <h3 class="section-subheading text-muted" id="page-top" >Tools</h3>
+                    <h3 class="section-subheading text-muted" id="page-top" >拖拽到收藏栏后点击收藏的书签即可使用</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item text-center">
-                    <a href="javascript:function jscodes(){topad=document.getElementsByClassName('chat-top-ad')[0];if(topad){topad.style.display='none';}var adobj=document.getElementsByTagName('object');for(var i=0;i<adobj.length;i++){if(adobj[i].id!='douyu_room_flash_proxy'){adobj[i].style.visibility='hidden';}}document.getElementsByClassName('fans-list')[0].style.display='none';document.getElementsByClassName('chat')[0].style.marginTop='-120px';document.getElementsByClassName('chat-cont')[0].style.height='550px';cl=document.getElementsByClassName('c-roll')[0];cc=document.getElementsByClassName('c-clear')[0];function changeStyle(ele){ele.width='100px';ele.style.height='50px';ele.style.fontSize='15px';ele.style.fontWeight='bolder';}changeStyle(cl);changeStyle(cc);}setInterval(jscodes,1000);void(0);" class="portfolio-link" data-toggle="modal">
-						<i class="fa fa-5x fa-cog"><span class="hide">弹幕区</span></i>
+                    <a href="javascript:function jscodes(){document.getElementsByClassName('chat-cont-wrap')[0].style.marginTop='0px';document.getElementsByClassName('chat-cont-wrap')[0].style.height='500px';topad=document.getElementsByClassName('chat-top-ad')[0];if(topad){topad.style.display='none';}adobj=document.getElementsByTagName('object');for(var i=0;i<adobj.length;i++){if(adobj[i].id!='douyu_room_flash_proxy'){adobj[i].style.visibility='hidden';}}document.getElementsByClassName('fans-list')[0].style.display='none';document.getElementsByClassName('chat')[0].style.marginTop='-100px';document.getElementsByClassName('chat-cont')[0].style.height='550px';cl=document.getElementsByClassName('c-roll')[0];cc=document.getElementsByClassName('c-clear')[0];function changeStyle(ele){ele.width='100px';ele.style.height='50px';ele.style.fontSize='15px';ele.style.fontWeight='bolder';}changeStyle(cl);changeStyle(cc);}setInterval(jscodes,100);void(0);" class="portfolio-link" data-toggle="modal">
+						<i class="fa fa-5x fa-cog"><span class="hide">弹幕区域</span></i>
                     </a>
                     <div class="portfolio-caption">
-                        <h4>弹幕区扩展(拖拽到收藏栏)</h4>
+                        <h4>弹幕区扩展</h4>
                         <p class="text-muted">优化弹幕列表区域，删除榜单栏，去除遮挡广告(广告自动消失前会影响弹幕区尺寸)，增大滚屏控制图标，方便管理禁言。仅适用于Chrome内核浏览器。By:斗舞</p>
 						<a class="text-muted" onclick="showdemo(this);">演示</a><img src='img/tool/1.gif' style='display:none;'/>
+                    </div>
+                </div>
+				<div class="col-md-4 col-sm-6 portfolio-item text-center">
+                    <a href="javascript:function sendmsg(txts){document.getElementsByTagName('textarea')[0].value=txts;setInterval(function(){document.getElementsByClassName('b-btn')[0].click();},100);}function sendtwo(){setTimeout(function(){sendmsg('HaNi九粉丝四群498356364 ←');},6000);sendmsg('主播是可爱的男孩子，喜欢的点波关注哟~');}sendtwo();setInterval(sendtwo,10000);void(0);" class="portfolio-link" data-toggle="modal">
+						<i class="fa fa-5x fa-cog"><span class="hide">自动弹幕</span></i>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>自动刷弹幕</h4>
+                        <p class="text-muted">每5秒自动发送弹幕，内容为“主播只是萌萌哒伪娘，喜欢的点波关注哟~”和“HaNi九粉丝四群498356364 ←”。By:斗舞</p>
+						<a class="text-muted" onclick="showdemo(this);">演示</a><img src='img/tool/2.gif' style='display:none;'/>
                     </div>
                 </div>
 				<div class="col-md-4 col-sm-6 portfolio-item text-center">
@@ -78,7 +88,7 @@ function showdemo(e){
 						<i class="fa fa-5x fa-cog"><span class="hide">抢宝箱</span></i>
                     </a>
                     <div class="portfolio-caption">
-                        <h4>自动抢宝箱(拖拽到收藏栏)</h4>
+                        <h4>自动抢宝箱</h4>
                         <p class="text-muted">在有宝箱的房间打开收藏的书签，即可以5ms一次的速率自动抢宝箱，火箭消失后需要重新进入直播间。By:来源网络</p>
                     </div>
                 </div>
