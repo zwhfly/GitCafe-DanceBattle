@@ -1,3 +1,6 @@
+a{
+	cursor:pointer;
+}
 .bg_mypic{
 	background-image: url(../img/s1_bg.jpg);
 	background-repeat: no-repeat;

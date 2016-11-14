@@ -32,7 +32,17 @@
     <![endif]-->
 
 </head>
-<script>console.log("网站还在开发阶段，如果有意愿合作，为小九做出贡献，请加入外宣部");</script>
+<script>console.log("网站还在开发阶段，如果有意愿合作，为小九做出贡献，请加入外宣部");
+function showdemo(e){
+	e.nextSibling.style.display='inline';
+	e.innerHTML='收起';
+	e.onclick=function(){
+		this.nextSibling.style.display='none';
+		this.innerHTML='演示';
+		this.onclick=function(){showdemo(this);}
+	}
+}
+</script>
 <body class="index">
 
     <!-- Navigation -->
@@ -60,6 +70,7 @@
                     <div class="portfolio-caption">
                         <h4>弹幕区扩展(拖拽到收藏栏)</h4>
                         <p class="text-muted">优化弹幕列表区域，删除榜单栏，去除遮挡广告(广告自动消失前会影响弹幕区尺寸)，增大滚屏控制图标，方便管理禁言。仅适用于Chrome内核浏览器。By:斗舞</p>
+						<a class="text-muted" onclick="showdemo(this);">演示</a><img src='img/tool/1.gif' style='display:none;'/>
                     </div>
                 </div>
 				<div class="col-md-4 col-sm-6 portfolio-item text-center">
