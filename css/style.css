@@ -2,10 +2,10 @@ a{
 	cursor:pointer;
 }
 .bg_mypic{
-	background-image: url(../img/s1_bg.jpg);
+	background-image: url(../img/s1_bg1.png);
 	background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 50% 12%;
+    background-position: 50% 40%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
