@@ -25,28 +25,51 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	<script src="js/md5.js"></script>
 	<script>console.log("网站还在开发阶段，如果有意愿合作，为小九做出贡献，请加入外宣部");
 	function showdemo(e){
-		e.nextSibling.style.display='inline';
+		e.nextSibling.nextSibling.style.display='inline';
 		e.innerHTML='收起';
 		e.onclick=function(){
-			this.nextSibling.style.display='none';
+			this.nextSibling.nextSibling.style.display='none';
 			this.innerHTML='演示';
 			this.onclick=function(){showdemo(this);}
 		}
 	}
 	function changewds(){
-		var msg1 = prompt("更改第1条弹幕","主播是可爱的男孩子，喜欢的点波关注哟~");
-		var msg2 = prompt("更改第2条弹幕","HaNi九粉丝四群498356364 ←");
-		if(msg1==msg2){
-			alert("两条弹幕不能一样哦");
-			window.location.href='tool.html';
+		var pwd = prompt("为防止恶意使用，请输入管理密码");
+		if(md5(pwd)=="c529a3cfe2b46a56a7bdc734f97fa4ff"){
+			var msg1 = prompt("更改第1条弹幕","主播是可爱的男孩子，喜欢的点波关注哟~");
+			var msg2 = prompt("更改第2条弹幕","HaNi九粉丝四群498356364 ←");
+			var timesout = prompt("更改时间，请输入大于5的整数，默认为9，单位为秒","9");
+			if(msg1==msg2){
+				alert("两条弹幕不能一样,且不能为空哦");
+				window.location.href='tool.html';
+			}else{
+				if(parseInt(timesout)!=timesout){
+					alert("请输入整数");
+					window.location.href='tool.html';
+				}else{
+					if(timesout<6){
+						alert("请输入大于等于6的整数");
+						window.location.href='tool.html';
+					}else{
+						timesout=timesout*1000;
+						dtimesout = parseInt(timesout)*2;
+						automsg = document.getElementById('automsg');
+						newmsg = automsg.href.replace("%E4%B8%BB%E6%92%AD%E6%98%AF%E5%8F%AF%E7%88%B1%E7%9A%84%E7%94%B7%E5%AD%A9%E5%AD%90%EF%BC%8C%E5%96%9C%E6%AC%A2%E7%9A%84%E7%82%B9%E6%B3%A2%E5%85%B3%E6%B3%A8%E5%93%9F~",msg1);
+						newmsg = newmsg.replace("HaNi%E4%B9%9D%E7%B2%89%E4%B8%9D%E5%9B%9B%E7%BE%A4498356364 %E2%86%90",msg2);
+						newmsg = newmsg.replace("9000",timesout);
+						newmsg = newmsg.replace("18000",dtimesout);
+						automsg.href=newmsg;
+						alert('自动弹幕内容已更改，请将图标拖拽到收藏栏~');
+					}
+				}
+			}
 		}else{
-			automsg = document.getElementById('automsg');
-			newmsg = automsg.href.replace("%E4%B8%BB%E6%92%AD%E6%98%AF%E5%8F%AF%E7%88%B1%E7%9A%84%E7%94%B7%E5%AD%A9%E5%AD%90%EF%BC%8C%E5%96%9C%E6%AC%A2%E7%9A%84%E7%82%B9%E6%B3%A2%E5%85%B3%E6%B3%A8%E5%93%9F~",msg1);
-			newmsg = newmsg.replace("HaNi%E4%B9%9D%E7%B2%89%E4%B8%9D%E5%9B%9B%E7%BE%A4498356364 %E2%86%90",msg2);
-			automsg.href=newmsg;
-			alert('自动弹幕内容已更改，请将图标拖拽到收藏栏~');
+			alert("密码错误，无法修改弹幕内容");
+			window.location.href='tool.html';
 		}
 	}
 	</script>
@@ -87,25 +110,24 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Ditto便携版</h4>
-                        <p class="text-muted">Ditto 是一款开源、免费、强大的剪贴板增强工具。可以把复制过的所有内容保存起来,快捷地供后续调用。From: 外宣团资源组-fxxx生</p>
+                        <p class="text-muted">Ditto 是一款开源、免费、强大的剪贴板增强工具。可以把复制过的所有内容保存起来,快捷地供后续调用。From: 外宣团资源组fxxx生</p>
                     </div>
                 </div>
 			</div>
 			<div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">黑科技</h2>
-                    <h3 class="section-subheading text-muted" id="page-top" >拖拽到收藏栏后点击收藏的书签即可使用</h3>
+                    <h3 class="section-subheading text-muted" id="page-top" >拖拽到收藏栏后点击收藏的书签即可使用，<a class="text-muted" onclick="showdemo(this);">演示</a><br><img src='img/tool/1.gif' style='display:none;'/></h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item text-center">
-                    <a href="javascript:function jscodes(){document.getElementsByClassName('chat-cont-wrap')[0].style.marginTop='0px';document.getElementsByClassName('chat-cont-wrap')[0].style.height='500px';topad=document.getElementsByClassName('chat-top-ad')[0];if(topad){topad.style.display='none';}adobj=document.getElementsByTagName('object');for(var i=0;i<adobj.length;i++){if(adobj[i].id!='douyu_room_flash_proxy'){adobj[i].style.visibility='hidden';}}document.getElementsByClassName('fans-list')[0].style.display='none';document.getElementsByClassName('chat')[0].style.marginTop='-100px';document.getElementsByClassName('chat-cont')[0].style.height='550px';cl=document.getElementsByClassName('c-roll')[0];cc=document.getElementsByClassName('c-clear')[0];function changeStyle(ele){ele.width='100px';ele.style.height='50px';ele.style.fontSize='15px';ele.style.fontWeight='bolder';}changeStyle(cl);changeStyle(cc);}setInterval(jscodes,100);void(0);" class="portfolio-link" data-toggle="modal">
+                    <a href="javascript:function jscodes(){document.getElementsByClassName('chat-cont-wrap')[0].style.marginTop='0px';document.getElementsByClassName('chat-cont-wrap')[0].style.height='500px';topad=document.getElementsByClassName('chat-top-ad')[0];if(topad){topad.style.display='none';}adobj=document.getElementsByTagName('object');for(var i=0;i<adobj.length;i++){if(adobj[i].id!='douyu_room_flash_proxy'){adobj[i].style.visibility='hidden';}}document.getElementsByClassName('fans-list')[0].style.display='none';document.getElementsByClassName('chat')[0].style.marginTop='-50px';document.getElementsByClassName('chat-cont')[0].style.height='550px';cl=document.getElementsByClassName('c-roll')[0];cc=document.getElementsByClassName('c-clear')[0];function changeStyle(ele){ele.width='100px';ele.style.height='50px';ele.style.fontSize='15px';ele.style.fontWeight='bolder';}changeStyle(cl);changeStyle(cc);}setInterval(jscodes,100);void(0);" class="portfolio-link" data-toggle="modal">
 						<i class="fa fa-5x fa-cog"><span class="hide">弹幕区域</span></i>
                     </a>
                     <div class="portfolio-caption">
                         <h4>弹幕区扩展</h4>
-                        <p class="text-muted">优化弹幕列表区域，删除榜单栏，去除页面广告，增大滚屏控制图标，方便管理操作。仅适用于Chrome内核浏览器。By:斗舞</p>
-						<a class="text-muted" onclick="showdemo(this);">演示</a><img src='img/tool/1.gif' style='display:none;'/>
+                        <p class="text-muted">扩大右侧弹幕列表区域，删除榜单栏，去除页面所有广告，增大滚屏控制图标，方便管理禁言操作。仅适用于Chrome内核浏览器。By:斗舞</p>
                     </div>
                 </div>
 				<div class="col-md-4 col-sm-6 portfolio-item text-center">
@@ -114,8 +136,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>自动刷弹幕</h4>
-                        <p class="text-muted">每5秒自动发送弹幕，内容为“主播只是萌萌哒伪娘，喜欢的点波关注哟~”和“HaNi九粉丝四群498356364 ←”。By:斗<span onclick='changewds()'>舞</span></p>
-						<a class="text-muted" onclick="showdemo(this);">演示</a><img src='img/tool/2.gif' style='display:none;'/>
+                        <p class="text-muted">每5秒自动发送弹幕，内容为“主播只是萌萌哒伪娘，喜欢的点波关注哟~”和“HaNi九粉丝四群498356364 ←”，<a onclick='changewds()'>修改弹幕和频率</a>。By:斗舞</p>
                     </div>
                 </div>
 				<div class="col-md-4 col-sm-6 portfolio-item text-center">
@@ -124,7 +145,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>自动抢宝箱</h4>
-                        <p class="text-muted">在有宝箱的房间打开收藏的书签，即可以每秒50次的速率自动抢宝箱，火箭消失后需要重新进入直播间。By:来源网络</p>
+                        <p class="text-muted">在有宝箱的房间点击收藏的书签，即可以每秒50次的速率自动点击宝箱，但无法改变由网速造成的延迟，火箭消失后需要重新进入直播间。By:来源网络</p>
                     </div>
                 </div>
 			</div>
