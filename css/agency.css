@@ -617,7 +617,8 @@ aside.clients img {
 }
 section#contact {
   background-color: #222222;
-  background-image: url('../img/map-image.jpg');
+  /* background-image: url('../img/map-image.jpg'); */
+  background-image: url(http://extraimage.net/images/2016/11/17/080dc388e1aaaa099edb6a49fb80f07a.jpg);
   background-position: center;
   background-repeat: no-repeat;
 }
