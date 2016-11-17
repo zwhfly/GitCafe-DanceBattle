@@ -75,6 +75,13 @@ a{
 .myicons{
 	margin-top:35%;
 }
+.sourcewrap{
+	height:200px;
+	text-align:center;
+}
+.sourcewrap i{
+	margin-top: 20%;
+}
 
 /** photo.html */
 .mypicpage a{
