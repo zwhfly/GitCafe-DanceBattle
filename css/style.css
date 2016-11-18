@@ -162,6 +162,11 @@ a{
 	cursor:pointer;
 }
 
+/** tool.html */
+.toollink{
+	cursor:move;
+}					
+
 /** 404.html */
 .light-background {
     background-color: #f0f2f4;
