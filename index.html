@@ -48,9 +48,12 @@
 	</script>
 </head>
 	
-	<img src="http://extraimage.net/images/2016/11/17/6131eb6752c74c771d7b0e1c8895bad5.png" onerror="this.src='img/cloudmusic.png'" style="position:fixed;z-index:9999;width:30px;height:30px;margin-top:45%;" onmouseover="$('#musicframe')[0].style.visibility = 'visible';"/>
-	<iframe id='musicframe' frameborder="no" border="0" marginwidth="0" marginheight="0" onmouseout="this.style.visibility='hidden'" style="visibility:hidden;position:fixed;z-index:9999;width:330px;height:200px;margin-top:36%;margin-left:-10px;" src="http://music.163.com/outchain/player?type=0&id=512446847&auto=1&height=430"></iframe>
 <body id="page-top" class="index">
+
+	<img id='cloudicon' src="http://extraimage.net/images/2016/11/17/6131eb6752c74c771d7b0e1c8895bad5.png" onerror="this.src='img/cloudmusic.png'" onmouseover="$('#musicframe')[0].style.visibility = 'visible';"/>
+	<div id='musicframe' onmouseout="this.style.visibility='hidden'">
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0"  height=200 src="http://music.163.com/outchain/player?type=0&id=512446847&auto=1&height=440"></iframe>
+	</div>
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
