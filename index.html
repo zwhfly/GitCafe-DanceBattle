@@ -45,12 +45,21 @@
 		$('#waixuanpic').attr("src",'http://extraimage.net/images/2016/11/17/0f18c6eb731407c7ec3f26503d49d4fd1.png');
 		$('#waixuanpic').attr("onerror","this.src='img/us.png'");
 		}}
+		function showplayer(ele){
+			$("#musicframe")[0].style.visibility = "visible";
+			ele.onclick = function(){
+				$("#musicframe")[0].style.visibility = "hidden";
+				this.onclick = function(){
+				showplayer(this);
+				}
+			}
+		}
 	</script>
 </head>
 	
 <body id="page-top" class="index">
 
-	<img id='cloudicon' src="http://extraimage.net/images/2016/11/17/6131eb6752c74c771d7b0e1c8895bad5.png" onerror="this.src='img/cloudmusic.png'" onmouseover="$('#musicframe')[0].style.visibility = 'visible';"/>
+	<img id='cloudicon' src="http://extraimage.net/images/2016/11/17/6131eb6752c74c771d7b0e1c8895bad5.png" onerror="this.src='img/cloudmusic.png'" onclick='showplayer(this);' onmouseover='showplayer(this);'/>
 	<div id='musicframe' onmouseout="this.style.visibility='hidden'">
 		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0"  height=200 src="http://music.163.com/outchain/player?type=0&id=512446847&auto=1&height=440"></iframe>
 	</div>
