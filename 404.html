@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 	    <title>Page Not Found</title>
@@ -8,6 +8,11 @@
 		<link href="http://hani9.cc/vend/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<!-- Simplify -->
 		<link href="http://hani9.cc/css/style.css" rel="stylesheet">
+		<script>
+			function huaji(){
+				document.getElementById('waixuan').style.display='inline';
+			}
+		</script>
   	</head>
 
   	<body class="light-background"><center>
@@ -15,14 +20,15 @@
 			<div class="error-wrapper">
 				<div class="error-inner">
 					<div class="error-type animated">404</div>
+					<img id='waixuan' style="display:none;animation:fadeInDown 1s ease;" src='http://extraimage.net/images/2016/11/19/97e9fb96c86b78845851eac379bf11ba.png' onerror="this.src='img/waixuan.png'"/>
 					<h1>Page Not Found</h1>
 					<p>Look like the page you're looking for isn't here anymore.
 						Try typing the address again or start over from the home page.</p>
 					<div class="m-top-md">
-						<a href="http://hani9.cc" class="btn btn-default btn-lg text-upper">Back to Home</a>
+						<a onmouseover="huaji()" href="http://hani9.cc" class="btn btn-default btn-lg text-upper">Back to Home</a>
 					</div>
 				</div><!-- ./error-inner -->
-			</div><!-- ./error-wrapper --><img src="http://extraimage.net/images/2016/11/17/ced703af49a3d4a67fbdde7a876db02b.gif" onerror="this.src='img/logo.gif'" class="img-responsive img-centered" style="margin:20px auto;border-radius:20px;animation:fadeInDown 1s ease;">
+			</div><!-- ./error-wrapper --><img onmouseover="huaji()" src="http://extraimage.net/images/2016/11/17/ced703af49a3d4a67fbdde7a876db02b.gif" onerror="this.src='img/logo.gif'" class="img-responsive img-centered" style="margin:20px auto;border-radius:20px;animation:fadeInDown 1s ease;">
 		</div><!-- /wrapper -->
 		<footer>
 			<p>Copyright &copy; 2016 hani9.cc 外宣团@不如来斗舞</p>

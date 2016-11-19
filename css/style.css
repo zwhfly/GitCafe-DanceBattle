@@ -1,69 +1,8 @@
 a{
 	cursor:pointer;
 }
-.bg_mypic{
-	/* background-image: url(../img/s1_bg1.jpg); */
-	background-image: url(http://extraimage.net/images/2016/11/17/082b95ab440ba754117699b920810783.jpg);
-	background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 44%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-.bg_mypic0{
-	/* background-image: url(../img/s1_bg0.jpg); */
-	background-image: url(http://extraimage.net/images/2016/11/17/06802ff9ae5b6c6c2f1e4923792b4c7f.jpg);
-	background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 20%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-.bg_mypic1{
-	/* background-image: url(../img/video/bili.jpg); */
-	background-image: url(http://extraimage.net/images/2016/11/17/5708d74fe7b0454136d02533c5ddef72.jpg);
-	background-repeat: no-repeat;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    background-size: 100%;
-    -o-background-size: 100%;
-}
-.bg_mypic2{
-	/* background-image: url(../img/video/acfun1.jpg); */
-	background-image: url(http://extraimage.net/images/2016/11/17/f96904597ea712902fab148a8270be7a.png);
-	background-repeat: no-repeat;
-    -webkit-background-size: 90%;
-    -moz-background-size: 90%;
-    background-size: 90%;
-   -o-background-size: 90%;
-}
-/* .bg_mypic3{
-	background-image: url(../img/video/douyu.png);
-	background-repeat: no-repeat;
-    background-position: 50% 0%;
-} */
-.bg_mypic4{
-	/* background-image: url(../img/video/youku.jpg); */
-	background-image: url(http://extraimage.net/images/2016/11/17/da0a37cab6dc89eb082a40956da4b641.jpg);
-	background-repeat: no-repeat;
-	background-position: 50% 0%;
-}
-.mylink-hover{
-  background: rgba(254, 209, 54, 0.9);
-  position: absolute;
-  width: 100%;
-  height: 70%;
-  opacity:0;
-  left: -5px;
-  transition: all ease 0.5s;
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
 
-}
+/**index.html*/
 .mylink-hover:hover{
 	opacity:1;
 }
@@ -80,14 +19,6 @@ a{
 .myicons{
 	margin-top:35%;
 }
-.sourcewrap{
-	height:200px;
-	text-align:center;
-}
-.sourcewrap i{
-	margin-top: 20%;
-}
-
 @media (min-width: 1138px) {
 	#cloudicon{
 		position:fixed;
@@ -157,15 +88,88 @@ a{
 	}
 }
 
-/** photo.html */
-.mypicpage a{
-	cursor:pointer;
+/**video.html*/
+.bg_mypic{
+	/* background-image: url(../img/s1_bg1.jpg); */
+	background-image: url(http://ww1.sinaimg.cn/large/9b0bd21fjw1f9xfhexue2j20vi0y3gvf.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 44%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.bg_mypic0{
+	/* background-image: url(../img/s1_bg0.jpg); */
+	background-image: url(http://extraimage.net/images/2016/11/17/06802ff9ae5b6c6c2f1e4923792b4c7f.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 20%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.bg_mypic1{
+	/* background-image: url(../img/video/bili.jpg); */
+	background-image: url(http://ww3.sinaimg.cn/large/9b0bd21fjw1f9xfuwmnm5j20sg0agwg6.jpg);
+	background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+    -o-background-size: 100%;
+}
+.bg_mypic2{
+	/* background-image: url(../img/video/acfun1.jpg); */
+	background-image: url(http://extraimage.net/images/2016/11/17/f96904597ea712902fab148a8270be7a.png);
+	background-repeat: no-repeat;
+    -webkit-background-size: 90%;
+    -moz-background-size: 90%;
+    background-size: 90%;
+   -o-background-size: 90%;
+}
+/* .bg_mypic3{
+	background-image: url(../img/video/douyu.png);
+	background-repeat: no-repeat;
+    background-position: 50% 0%;
+} */
+.bg_mypic4{
+	/* background-image: url(../img/video/youku.jpg); */
+	background-image: url(http://extraimage.net/images/2016/11/17/da0a37cab6dc89eb082a40956da4b641.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+}
+
+.mylink-hover{
+  background: rgba(254, 209, 54, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  opacity:0;
+  left: -5px;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+
 }
 
 /** tool.html */
 .toollink{
 	cursor:move;
-}					
+}	
+.sourcewrap{
+	height:200px;
+	text-align:center;
+}
+.sourcewrap i{
+	margin-top: 20%;
+}
+
+/** photo.html */
+.mypicpage a{
+	cursor:pointer;
+}				
 
 /** 404.html */
 .light-background {
