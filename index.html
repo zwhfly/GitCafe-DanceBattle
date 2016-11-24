@@ -58,8 +58,8 @@
 				}
 			}
 			ele.onclick=function(){
-				$(id)[0].display='inline';
-				this.onmouseleave='';
+					$(id)[0].display='inline';
+					this.onmouseleave='';
 			}
 		}
 	</script>
@@ -67,7 +67,7 @@
 	
 <body id="page-top" class="index">
 
-	<img id='cloudicon' src="http://extraimage.net/images/2016/11/17/6131eb6752c74c771d7b0e1c8895bad5.png" onerror="this.src='img/cloudmusic.png'" onclick='showplayer(this);' onmouseover='showplayer(this);'/>
+	<img id='cloudicon' src="http://extraimage.net/images/2016/11/24/9d8449588a0cdc512cbb9bee74e4a293.png" onerror="this.src='img/cloudmusic.png'" onclick='showplayer(this);' onmouseover='showplayer(this);'/>
 	<div id='musicframe' onmouseout="this.style.visibility='hidden'">
 		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0"  height=200 src="http://music.163.com/outchain/player?type=0&id=512446847&auto=1&height=440"></iframe>
 	</div>
@@ -478,15 +478,20 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a><i class="fa fa-github"></i></a>
+                        <li><a onclick="$('#mygithub')[0].style.display='inline'" onmouseleave="$('#mygithub')[0].style.display='none'"><i class="fa fa-github"></i></a>
+							<p id="mygithub" style="position:absolute;margin:10px -50px;display:none;">才不告诉你呢~</p>
                         </li>
                         <li><a onmouseenter="showqr(this,'#myemail')"><i class="fa fa-envelope"></i></a>
-							<p id="myemail" style="position:absolute;margin:10px -80px;display:none;">collapselzh@gmail.com</p>
+							<p id="myemail" style="position:absolute;margin:10px -140px;display:none;">请将反馈发送至：collapselzh@gmail.com</p>
                         </li>
-						   <li><a><i class="fa fa-qq"></i></a>
+						   <li><a onmouseenter="showqr(this,'#myqq')"><i class="fa fa-qq"></i></a>
+						   <p id="myqq" style="position:absolute;margin:10px -140px;display:none;">问题反馈请联系：粉丝二群或四群@不如来斗舞</p>
                         </li>
 							<li><a onmouseenter="showqr(this,'#myqrcode')"><i class="fa fa-wechat"></i></a>
-							<img id="myqrcode" src="http://ww1.sinaimg.cn/large/9b0bd21fjw1fa2m4hhqurj205d05r0ti.jpg" onerror="this.src='img/qr.jpg'" style="position:absolute;margin:-150px 20px;display:none;"/>
+							<span id="myqrcode" style="position:absolute;margin:-150px 20px;display:none;">
+								<img src="http://ww1.sinaimg.cn/large/9b0bd21fjw1fa370xtem0j205a05pt9h.jpg" onerror="this.src='img/qr.jpg'" />
+								<p style="position:absolute;margin: -50px -220px;">问题反馈专用微信号，平时不会用</p>
+							</span>
                         </li>
                     </ul>
                 </div>
@@ -497,7 +502,7 @@
                         <li><a href="#">Terms of Use</a>
                         </li>
                     </ul> -->
-					<img src="http://ww4.sinaimg.cn/large/9b0bd21fjw1fa2l6haj7mg206o03zgo9.gif" onerror="this.src='img/logo.gif'" class="img-responsive img-centered" alt="" style='float:right;margin-top:-20px;padding:0;height:100px;border-radius:20px;'/>
+					<img src="http://ww4.sinaimg.cn/large/9b0bd21fjw1fa2l6haj7mg206o03zgo9.gif" onerror="this.src='img/logo.gif'" class="img-responsive img-centered waixuanlogo" alt="HaNi九外宣团" />
                 </div>
             </div>
         </div>
