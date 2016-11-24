@@ -72,6 +72,7 @@
 						newmsg = newmsg.replace("9000",timesout);
 						newmsg = newmsg.replace("18000",dtimesout);
 						automsg.href=newmsg;
+						$('#autoname')[0].innerHTML='自动弹幕'+timesout/1000+'s';
 						alert('自动弹幕内容已更改，请将图标拖拽到收藏栏~');
 					}
 				}
@@ -150,7 +151,7 @@
                 </div>
 				<div class="col-md-4 col-sm-6 portfolio-item text-center">
                     <a id='automsg' href="javascript:function sendmsg(txts){document.getElementsByTagName('textarea')[0].value=txts;loopclick = setInterval(function(){document.getElementsByClassName('b-btn')[0].click();},1000);}function sendtwo(){timeout1 = setTimeout(function(){sendmsg('HaNi九粉丝四群498356364 ←');},9000);sendmsg('主播是可爱的男孩子，喜欢的点波关注哟~');}loopstaus=document.getElementById('qrcode-content');if(loopstaus.innerHTML=='弹幕循环中'){clearInterval(loopmsg);clearInterval(loopclick);clearTimeout(timeout1);loopstaus.innerHTML='手机看直播';loopstaus.style.cssText='color:black;font-weight:normal;';document.getElementsByClassName('b-btn')[0].className='b-btn1';btnele1=document.getElementsByClassName('b-btn1')[0];btnele1.style.cssText='display: block;width: 43px;height: 49px;line-height: 49px;border-radius: 0 4px 4px 0;background: #f70;color: #fff;font-size: 14px;position:absolute;margin-left:280px;text-align: center;cursor: pointer;content:\'发送\';';}else{sendtwo();loopmsg = setInterval(sendtwo,18000);loopstaus.innerHTML='弹幕循环中';loopstaus.style.cssText='color:red;font-weight:bold;';document.getElementsByClassName('b-btn1')[0].className='b-btn';}location.href='#anchor-info';void(0);" class="toollink" title="拖拽到收藏栏后点击收藏的书签即可使用" onclick='alert("请拖拽到收藏栏，如有疑惑请查看副标题的演示");'>
-						<i class="fa fa-5x fa-cog"><span class="hide">自动弹幕</span></i>
+						<i class="fa fa-5x fa-cog"><span class="hide" id='autoname'>自动弹幕9s</span></i>
                     </a>
                     <div class="portfolio-caption">
                         <h4>自动刷弹幕</h4>
