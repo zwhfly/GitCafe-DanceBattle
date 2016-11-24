@@ -186,7 +186,13 @@ a{
 /** photo.html */
 .mypicpage a{
 	cursor:pointer;
-}				
+}	
+.mypicthumb{
+	height:200px;
+}
+.myalbum{
+	height:80px;
+}	
 
 /** 404.html */
 .light-background {
