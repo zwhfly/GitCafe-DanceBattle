@@ -32,7 +32,21 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<script>console.log("网站还在开发阶段，如果有意愿合作，为小九做出贡献，请加入外宣部");</script>
+	<script>console.log("网站还在开发阶段，如果有意愿合作，为小九做出贡献，请加入外宣部");
+		function showqr(ele,id){
+			$(id)[0].style.display='inline';
+			ele.onmouseleave=function(){
+				$(id)[0].style.display='none';
+				this.onmouseenter = function(){
+					showqr(this,id);
+				}
+			}
+			ele.onclick=function(){
+					$(id)[0].display='inline';
+					this.onmouseleave='';
+			}
+		}
+	</script>
 </head>
 
 <body id="page-top" class="index">
@@ -464,16 +478,23 @@
                 <div class="col-md-4">
                     <span class="copyright">Copyright &copy; 2016 hani9.cc 外宣团@不如来斗舞</span>
                 </div>
-                <div class="col-md-4">
+                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-github"></i></a>
+                        <li><a onclick="$('#mygithub')[0].style.display='inline'" onmouseleave="$('#mygithub')[0].style.display='none'"><i class="fa fa-github"></i></a>
+							<p id="mygithub" style="position:absolute;margin:10px -50px;display:none;">才不告诉你呢~</p>
                         </li>
-                        <li><a href="#"><i class="fa fa-qq"></i></a>
+                        <li><a onmouseenter="showqr(this,'#myemail')"><i class="fa fa-envelope"></i></a>
+							<p id="myemail" style="position:absolute;margin:10px -140px;display:none;">请将反馈发送至：collapselzh@gmail.com</p>
                         </li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a>
+						   <li><a onmouseenter="showqr(this,'#myqq')"><i class="fa fa-qq"></i></a>
+						   <p id="myqq" style="position:absolute;margin:10px -140px;display:none;">网站问题反馈请联系：粉丝二群或四群@不如来斗舞</p>
                         </li>
-							<li><a href="#"><i class="fa fa-wechat"></i></a>
-                        </li>	
+							<li><a onmouseenter="showqr(this,'#myqrcode')"><i class="fa fa-wechat"></i></a>
+							<span id="myqrcode" style="position:absolute;margin:-150px 20px;display:none;">
+								<img src="http://ww1.sinaimg.cn/large/9b0bd21fjw1fa370xtem0j205a05pt9h.jpg" onerror="this.src='img/qr.jpg'" />
+								<p style="position:absolute;margin: -50px -220px;">问题反馈专用微信号，平时不会用</p>
+							</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
